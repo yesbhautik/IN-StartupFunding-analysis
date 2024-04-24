@@ -107,6 +107,11 @@ The Investor Analysis section enables users to select a specific investor from a
 - **YoY Investment**: This line graph shows the year-on-year investment trend of the selected investor in terms of amount.
 - **Investors in Similar Sectors**: This component lists four investors who have invested in the same sectors as the selected investor.
 
+## Workflow Diagram
+
+The following diagram illustrates the workflow of the Streamlit Indian Startup Funding Data Visualization project:
+
+![Workflow Diagram](./repo-info/workflow.svg)
 ## How to Use
 
 1. Launch the Streamlit app by following the installation instructions mentioned earlier.
@@ -118,6 +123,4 @@ The Investor Analysis section enables users to select a specific investor from a
 
 ## Contact
 
-For any questions or inquiries, feel free to reach out to me at:
-
-- [Website](https://yesbhautik.co.in/)
+For any questions or inquiries, feel free to reach out to me at [Website](https://yesbhautik.co.in/)
