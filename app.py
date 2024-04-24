@@ -15,6 +15,9 @@ Website: https://yesbhautik.co.in
 """
 
 import streamlit as st
+from ml_model import MLModel
+import pandas as pd
+
 
 from analysis import (
     Investor as InvestorAnalysis,
@@ -62,6 +65,10 @@ class Main:
         self.startup_analysis = StartupAnalysis()
         self.startup_component = StartupComponent()
         self.home_component()
+        self.data = pd.read_csv('./dataset/startup_cleaned.csv')
+        self.ml_model = MLModel(self.data)
+        self.ml_model.preprocess_data()
+        self.ml_model.train_model()
 
     def home_component(self):
         """
