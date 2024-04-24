@@ -1,0 +1,26 @@
+Analysis for Data
+
+- data import
+- get data shape
+- get data columns
+- get data types
+- get data info
+- get data description
+- get data null values
+- get data null values percentage
+- get data duplicate values
+- get data duplicate values percentage
+- get data unique values
+- get data unique values count
+- get data unique values percentage
+- get data missing values
+- get data missing values percentage
+- get data missing values count
+- get data missing values percentage
+- data cleaning
+- data preprocessing
+- data visualization
+- data analysis
+- data modeling
+- data evaluation
+- data prediction
