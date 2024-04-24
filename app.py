@@ -170,6 +170,9 @@ class Main:
         st.divider()
         self.overall_component.plot_funding_amount_year_month()
 
+        st.divider()
+        self.overall_component.display_funding_statistics()
+
     def startup(self):
         """
         Render the startup analysis component.

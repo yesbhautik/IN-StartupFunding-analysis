@@ -17,7 +17,7 @@ Website: https://yesbhautik.co.in
 """
 
 import pandas as pd
-
+import numpy as np
 from dataset import startup
 
 
@@ -254,7 +254,7 @@ class Overall:
             index='year', columns='month', values='amount')
 
         return pivot_table
-    
+
     def calculate_funding_by_month_and_year(self):
         """
         Calculates the funding amount on a month-by-year basis.
@@ -271,3 +271,27 @@ class Overall:
             index='month', columns='year', values='amount')
 
         return pivot_table
+
+    def funding_mean(self):
+        """Calculate the mean funding amount."""
+        return np.mean(self.startup['amount'])
+
+    def funding_median(self):
+        """Calculate the median funding amount."""
+        return np.median(self.startup['amount'])
+
+    def funding_mode(self):
+        """Calculate the mode of funding amounts."""
+        mode_val = pd.Series(self.startup['amount']).mode()
+        if not mode_val.empty:
+            return mode_val.iloc[0]
+        else:
+            return None
+
+    def funding_std_dev(self):
+        """Calculate the standard deviation of funding amounts."""
+        return np.std(self.startup['amount'])
+
+    def funding_variance(self):
+        """Calculate the variance of funding amounts."""
+        return np.var(self.startup['amount'])

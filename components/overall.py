@@ -246,3 +246,17 @@ class Overall:
 
         fig = go.Figure(data=[heatmap], layout=layout)
         st.plotly_chart(fig, use_container_width=True)
+
+    def display_funding_statistics(self):
+        """Display funding statistics in the Streamlit app."""
+        mean = self.overall_analysis.funding_mean()
+        median = self.overall_analysis.funding_median()
+        mode = self.overall_analysis.funding_mode()
+        std_dev = self.overall_analysis.funding_std_dev()
+        variance = self.overall_analysis.funding_variance()
+
+        st.markdown(f"**Mean Funding Amount:** {mean} Cr")
+        st.markdown(f"**Median Funding Amount:** {median} Cr")
+        st.markdown(f"**Mode of Funding Amounts:** {mode} Cr")
+        st.markdown(f"**Standard Deviation of Funding Amounts:** {std_dev} Cr")
+        st.markdown(f"**Variance of Funding Amounts:** {variance} Cr")
